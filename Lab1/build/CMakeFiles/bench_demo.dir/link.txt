@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/bench_demo.dir/src/BenchmarkDemo.cpp.o -o bench_demo  /home/filip/spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.3.0/benchmark-1.6.0-auzzk3dmodpzygbnfvneirhrxplr4htr/lib/libbenchmark.a /usr/lib/x86_64-linux-gnu/librt.a 

@@ -1,0 +1,3 @@
+/home/filip/HPC/Lab1/build/CMakeFiles/bench_demo.dir
+/home/filip/HPC/Lab1/build/CMakeFiles/edit_cache.dir
+/home/filip/HPC/Lab1/build/CMakeFiles/rebuild_cache.dir
