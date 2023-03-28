@@ -110,15 +110,15 @@ void packPanel(const double* B, size_t panel, const std::unique_ptr< double[] >&
     static const size_t no_panel_elems = panel_width * N;
     for( size_t i = 0; i != no_panel_elems; i++){
         size_t j = (i%sliver_width)*N + i/sliver_width;
-        pack_alloc[i] = B[(i/no_sliver_elems)*N + j%(no_sliver_elems) + panel * panel_width];
+        pack_alloc[i] = B[(i/no_sliver_elems)*N*sliver_width + j%(no_sliver_elems) + panel * panel_width];
     }
 }
 void packBlock(const double* A, size_t block, size_t panel, const std::unique_ptr< double[] >& pack_alloc)
 {
     static const size_t magic_divisior = N*(panel_width - 1UL) + panel_width;
-    for(size_t i = 0; i != panel_width*sliver_width; i++){
+    for(size_t i = 0; i != panel_width*panel_width; i++){
         size_t j = i%sliver_width + (i/sliver_width)*N;
-        pack_alloc[i] = A[j%magic_divisior + (j/magic_divisior)*sliver_width + panel_width*block + N*panel];
+        pack_alloc[i] = A[j%magic_divisior + (j/magic_divisior)*sliver_width + panel_width*block + N*panel*panel_width];
     }
 }
 size_t computeABlockOffset(size_t a_sliver)
@@ -132,7 +132,7 @@ size_t computeBPanelOffset(size_t b_sliver)
 void scatterCPixel(const double* C_pixel, size_t panel, size_t block, size_t a_sliver, size_t b_sliver, double* C)
 {
     for(size_t i = 0; i != sliver_width*sliver_width; i++){
-        C[a_sliver*sliver_width + b_sliver*sliver_width*N + block*panel_width + panel*sliver_width*N + i] = C_pixel[i];
+        C[a_sliver*sliver_width + b_sliver*sliver_width*N + block*panel_width + panel*panel_width*N + i] = C_pixel[i];
     }
 }
 static void gotoDgemmSquare(const double* A, const double* B, double* C)
@@ -144,7 +144,7 @@ static void gotoDgemmSquare(const double* A, const double* B, double* C)
         packPanel(B, panel, B_packed_panel);
         for (size_t block = 0; block != N / panel_width; ++block)
         {
-            packBlock(A, panel, block, A_packed_block);
+            packBlock(A, block, panel, A_packed_block);
             for (size_t b_sliver = 0; b_sliver != N / sliver_width; ++b_sliver)
                 for (size_t a_sliver = 0; a_sliver != panel_width / sliver_width; ++a_sliver)
                 {
@@ -153,7 +153,7 @@ static void gotoDgemmSquare(const double* A, const double* B, double* C)
                     double     C_pixel[sliver_width * sliver_width];
                     std::fill_n(C_pixel, sliver_width * sliver_width, 0.);
                     multSliverSliver(A_packed_block.get() + A_offs, B_packed_panel.get() + B_offs, C_pixel);
-                    scatterCPixel(C_pixel, panel, block, a_sliver, b_sliver, C);
+                    // scatterCPixel(C_pixel, panel, block, a_sliver, b_sliver, C);
                 }
         }
     }
