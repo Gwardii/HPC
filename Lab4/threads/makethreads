@@ -1,0 +1,2 @@
+g++ -std=gnu++0x thread1.cpp -pthread
+

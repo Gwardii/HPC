@@ -1,0 +1,307 @@
+2023-04-18 19:38:41
+Running ./serial
+Run on (4 X 3400 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 6144K (x1)
+Load Average: 0.05, 0.28, 0.55
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+---------------------------------------------------------------------------------------------
+Benchmark                                   Time             CPU   Iterations UserCounters...
+---------------------------------------------------------------------------------------------
+BM_SomeFunction/2/real_time               248 ns          248 ns      2792469 DPFlops=8.06589M/s
+BM_SomeFunction/8/real_time              1341 ns         1340 ns       506283 DPFlops=5.96733M/s
+BM_SomeFunction/64/real_time            12019 ns        12016 ns        56090 DPFlops=5.32476M/s
+BM_SomeFunction/512/real_time          104802 ns       102541 ns         6627 DPFlops=4.88541M/s
+BM_SomeFunction/4096/real_time         841682 ns       822590 ns          806 DPFlops=4.86644M/s
+BM_SomeFunction/32768/real_time       6608530 ns      6458550 ns          105 DPFlops=4.95844M/s
+BM_SomeFunction/262144/real_time     52167748 ns     50989248 ns           13 DPFlops=5.02502M/s
+BM_SomeFunction/2097152/real_time   419752229 ns    409899731 ns            2 DPFlops=4.99617M/s
+BM_SomeFunction/16777216/real_time 3295097786 ns   3223264799 ns            1 DPFlops=5.09157M/s
+BM_SomeFunction/67108864/real_time 13060427098 ns   12788801637 ns            1 DPFlops=5.13834M/s
+2023-04-18 19:43:20
+Running ./tbb_parallel_for
+Run on (4 X 3400 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 6144K (x1)
+Load Average: 0.30, 0.29, 0.48
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+----------------------------------------------------------------------------------------------
+Benchmark                                    Time             CPU   Iterations UserCounters...
+----------------------------------------------------------------------------------------------
+BM_SomeFunction/2/1/real_time              645 ns          631 ns      1101192 DPFlops=3.09996M/s
+BM_SomeFunction/8/1/real_time             3204 ns         3130 ns       218832 DPFlops=2.49721M/s
+BM_SomeFunction/64/1/real_time           28128 ns        27475 ns        24714 DPFlops=2.27527M/s
+BM_SomeFunction/512/1/real_time         149517 ns       146931 ns         4523 DPFlops=3.42435M/s
+BM_SomeFunction/4096/1/real_time        838277 ns       837924 ns          811 DPFlops=4.88621M/s
+BM_SomeFunction/32768/1/real_time      6228941 ns      6226048 ns          111 DPFlops=5.26061M/s
+BM_SomeFunction/262144/1/real_time    49499974 ns     49463562 ns           14 DPFlops=5.29584M/s
+BM_SomeFunction/2097152/1/real_time  391506774 ns    391216299 ns            2 DPFlops=5.35662M/s
+BM_SomeFunction/2/2/real_time              685 ns          685 ns       998224 DPFlops=2.9193M/s
+BM_SomeFunction/8/2/real_time             3107 ns         3105 ns       226626 DPFlops=2.57512M/s
+BM_SomeFunction/64/2/real_time           15719 ns        15709 ns        43808 DPFlops=4.0715M/s
+BM_SomeFunction/512/2/real_time          76634 ns        76594 ns         9061 DPFlops=6.68107M/s
+BM_SomeFunction/4096/2/real_time        434435 ns       434280 ns         1263 DPFlops=9.42833M/s
+BM_SomeFunction/32768/2/real_time      3251638 ns      3250122 ns          217 DPFlops=10.0774M/s
+BM_SomeFunction/262144/2/real_time    24954341 ns     24939765 ns           28 DPFlops=10.5049M/s
+BM_SomeFunction/2097152/2/real_time  201117883 ns    201032240 ns            3 DPFlops=10.4275M/s
+BM_SomeFunction/2/4/real_time              760 ns          749 ns       913007 DPFlops=2.6306M/s
+BM_SomeFunction/8/4/real_time             2986 ns         2985 ns       235037 DPFlops=2.67924M/s
+BM_SomeFunction/64/4/real_time           11627 ns        11576 ns        53394 DPFlops=5.50422M/s
+BM_SomeFunction/512/4/real_time          49166 ns        49121 ns        12736 DPFlops=10.4137M/s
+BM_SomeFunction/4096/4/real_time        253251 ns       253012 ns         2710 DPFlops=16.1737M/s
+BM_SomeFunction/32768/4/real_time      1720524 ns      1718774 ns          374 DPFlops=19.0454M/s
+BM_SomeFunction/262144/4/real_time    13135463 ns     13020323 ns           48 DPFlops=19.957M/s
+BM_SomeFunction/2097152/4/real_time  104445275 ns    102564883 ns            6 DPFlops=20.079M/s
+BM_SomeFunction/2/8/real_time              758 ns          754 ns       895143 DPFlops=2.63831M/s
+BM_SomeFunction/8/8/real_time             3013 ns         2991 ns       237400 DPFlops=2.65475M/s
+BM_SomeFunction/64/8/real_time           10983 ns        10929 ns        51241 DPFlops=5.82737M/s
+BM_SomeFunction/512/8/real_time          48681 ns        48640 ns        13373 DPFlops=10.5175M/s
+BM_SomeFunction/4096/8/real_time        258720 ns       257933 ns         2651 DPFlops=15.8318M/s
+BM_SomeFunction/32768/8/real_time      1816686 ns      1811845 ns          368 DPFlops=18.0372M/s
+BM_SomeFunction/262144/8/real_time    13254091 ns     12841942 ns           46 DPFlops=19.7783M/s
+BM_SomeFunction/2097152/8/real_time  104470143 ns    101793430 ns            6 DPFlops=20.0742M/s
+2023-04-18 19:44:28
+Running ./tbb_parallel_reduce
+Run on (4 X 3400 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 6144K (x1)
+Load Average: 0.74, 0.47, 0.53
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+----------------------------------------------------------------------------------------------
+Benchmark                                    Time             CPU   Iterations UserCounters...
+----------------------------------------------------------------------------------------------
+BM_SomeFunction/2/1/real_time             1059 ns         1059 ns       649832 DPFlops=1.88783M/s
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+BM_SomeFunction/8/1/real_time             5317 ns         5315 ns       131226 DPFlops=1.50468M/s
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+BM_SomeFunction/64/1/real_time           42843 ns        42833 ns        16314 DPFlops=1.49382M/s
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+BM_SomeFunction/512/1/real_time         191792 ns       191754 ns         3563 DPFlops=2.66955M/s
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+BM_SomeFunction/4096/1/real_time        897766 ns       897458 ns          749 DPFlops=4.56243M/s
+-0.955028
+-0.955028
+-0.955028
+BM_SomeFunction/32768/1/real_time      6434207 ns      6431369 ns          108 DPFlops=5.09278M/s
+-0.955023
+-0.955023
+BM_SomeFunction/262144/1/real_time    50088944 ns     50069398 ns           14 DPFlops=5.23357M/s
+-0.955023
+-0.955023
+BM_SomeFunction/2097152/1/real_time  396235946 ns    396104586 ns            2 DPFlops=5.29268M/s
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+BM_SomeFunction/2/2/real_time             1174 ns         1173 ns       591685 DPFlops=1.70415M/s
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+BM_SomeFunction/8/2/real_time             5532 ns         5531 ns       123635 DPFlops=1.44602M/s
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+BM_SomeFunction/64/2/real_time           25690 ns        25684 ns        27030 DPFlops=2.49126M/s
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+BM_SomeFunction/512/2/real_time         102919 ns       102893 ns         6622 DPFlops=4.97479M/s
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+BM_SomeFunction/4096/2/real_time        466239 ns       455270 ns         1505 DPFlops=8.78519M/s
+-0.955028
+-0.955028
+-0.955028
+-0.955028
+BM_SomeFunction/32768/2/real_time      3253805 ns      3179865 ns          213 DPFlops=10.0707M/s
+-0.955023
+-0.955023
+-0.955023
+BM_SomeFunction/262144/2/real_time    25297412 ns     24741618 ns           27 DPFlops=10.3625M/s
+-0.955023
+-0.955023
+BM_SomeFunction/2097152/2/real_time  201101555 ns    196755137 ns            3 DPFlops=10.4283M/s
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+BM_SomeFunction/2/4/real_time             1393 ns         1299 ns       508562 DPFlops=1.43615M/s
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+BM_SomeFunction/8/4/real_time             5577 ns         5572 ns       118272 DPFlops=1.43446M/s
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+BM_SomeFunction/64/4/real_time           18760 ns        18740 ns        30883 DPFlops=3.41154M/s
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+BM_SomeFunction/512/4/real_time          69308 ns        69260 ns        10274 DPFlops=7.38727M/s
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+BM_SomeFunction/4096/4/real_time        268291 ns       268107 ns         2386 DPFlops=15.267M/s
+-0.955028
+-0.955028
+-0.955028
+-0.955028
+BM_SomeFunction/32768/4/real_time      1745692 ns      1744852 ns          372 DPFlops=18.7708M/s
+-0.955023
+-0.955023
+-0.955023
+BM_SomeFunction/262144/4/real_time    13396552 ns     13081860 ns           49 DPFlops=19.568M/s
+-0.955023
+-0.955023
+BM_SomeFunction/2097152/4/real_time  106369437 ns    103879829 ns            6 DPFlops=19.7157M/s
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+-1.12912
+BM_SomeFunction/2/8/real_time             1350 ns         1319 ns       516986 DPFlops=1.48177M/s
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+-1.22009
+BM_SomeFunction/8/8/real_time             5640 ns         5487 ns       119549 DPFlops=1.41846M/s
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+-0.966973
+BM_SomeFunction/64/8/real_time           18669 ns        18214 ns        31491 DPFlops=3.42812M/s
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+-0.957251
+BM_SomeFunction/512/8/real_time          67546 ns        65915 ns         9321 DPFlops=7.58007M/s
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+-0.955107
+BM_SomeFunction/4096/8/real_time        267006 ns       266947 ns         2487 DPFlops=15.3405M/s
+-0.955028
+-0.955028
+-0.955028
+-0.955028
+BM_SomeFunction/32768/8/real_time      1753901 ns      1746038 ns          374 DPFlops=18.6829M/s
+-0.955023
+-0.955023
+-0.955023
+BM_SomeFunction/262144/8/real_time    13361432 ns     12987202 ns           49 DPFlops=19.6195M/s
+-0.955023
+-0.955023
+BM_SomeFunction/2097152/8/real_time  106888964 ns    106857072 ns            6 DPFlops=19.6199M/s
+2023-04-18 19:46:02
+Running ./tbb_false_sharing
+Run on (4 X 3400 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 6144K (x1)
+Load Average: 0.78, 0.62, 0.59
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+----------------------------------------------------------------------------------------------
+Benchmark                                    Time             CPU   Iterations UserCounters...
+----------------------------------------------------------------------------------------------
+BM_SomeFunction/2/1/real_time              641 ns          640 ns      1109587 DPFlops=3.1223M/s
+BM_SomeFunction/8/1/real_time             3181 ns         3179 ns       220887 DPFlops=2.51528M/s
+BM_SomeFunction/64/1/real_time           28054 ns        28042 ns        24805 DPFlops=2.28134M/s
+BM_SomeFunction/512/1/real_time         150241 ns       150186 ns         4520 DPFlops=3.40786M/s
+BM_SomeFunction/4096/1/real_time        869260 ns       868959 ns          784 DPFlops=4.71205M/s
+BM_SomeFunction/32768/1/real_time      6444201 ns      6440868 ns          107 DPFlops=5.08488M/s
+BM_SomeFunction/262144/1/real_time    50264413 ns     50243692 ns           14 DPFlops=5.2153M/s
+BM_SomeFunction/2097152/1/real_time  404013211 ns    403816053 ns            2 DPFlops=5.1908M/s
+BM_SomeFunction/2/2/real_time              703 ns          701 ns       977935 DPFlops=2.84401M/s
+BM_SomeFunction/8/2/real_time             3190 ns         3115 ns       221917 DPFlops=2.50771M/s
+BM_SomeFunction/64/2/real_time           16415 ns        16039 ns        41313 DPFlops=3.89897M/s
+BM_SomeFunction/512/2/real_time          86716 ns        84681 ns         7944 DPFlops=5.9043M/s
+BM_SomeFunction/4096/2/real_time        510762 ns       501938 ns         1360 DPFlops=8.01939M/s
+BM_SomeFunction/32768/2/real_time      3918359 ns      3915959 ns          181 DPFlops=8.36268M/s
+BM_SomeFunction/262144/2/real_time    30253130 ns     30240406 ns           23 DPFlops=8.66502M/s
+BM_SomeFunction/2097152/2/real_time  239965142 ns    239849106 ns            3 DPFlops=8.7394M/s
+BM_SomeFunction/2/4/real_time              772 ns          772 ns       868514 DPFlops=2.58938M/s
+BM_SomeFunction/8/4/real_time             3126 ns         3125 ns       229114 DPFlops=2.55941M/s
+BM_SomeFunction/64/4/real_time           12306 ns        12289 ns        49054 DPFlops=5.20058M/s
+BM_SomeFunction/512/4/real_time          57032 ns        57007 ns        11308 DPFlops=8.97749M/s
+BM_SomeFunction/4096/4/real_time        347802 ns       347686 ns         2082 DPFlops=11.7768M/s
+BM_SomeFunction/32768/4/real_time      2450300 ns      2449463 ns          281 DPFlops=13.3731M/s
+BM_SomeFunction/262144/4/real_time    18606536 ns     18601557 ns           36 DPFlops=14.0888M/s
+BM_SomeFunction/2097152/4/real_time  147244066 ns    147208197 ns            5 DPFlops=14.2427M/s
+BM_SomeFunction/2/8/real_time              846 ns          779 ns       887174 DPFlops=2.36339M/s
+BM_SomeFunction/8/8/real_time             3094 ns         3093 ns       229086 DPFlops=2.58594M/s
+BM_SomeFunction/64/8/real_time           12064 ns        12060 ns        48821 DPFlops=5.30518M/s
+BM_SomeFunction/512/8/real_time          56605 ns        56582 ns        11358 DPFlops=9.04509M/s
+BM_SomeFunction/4096/8/real_time        350315 ns       350199 ns         2105 DPFlops=11.6923M/s
+BM_SomeFunction/32768/8/real_time      2439948 ns      2439026 ns          279 DPFlops=13.4298M/s
+BM_SomeFunction/262144/8/real_time    18621978 ns     18609062 ns           35 DPFlops=14.0771M/s
+BM_SomeFunction/2097152/8/real_time  147102953 ns    141654096 ns            5 DPFlops=14.2564M/s
