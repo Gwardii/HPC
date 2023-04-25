@@ -4,5 +4,22 @@ project(cpp_generic)
 find_package(TBB REQUIRED)
 find_package(benchmark REQUIRED)
 
-add_executable(advection_serial advection_serial.cpp)
+# add_executable(advection_explicit_serial_0 advection_explicit_serial_0.cpp)
+# add_executable(advection_implicit_serial_0 advection_implicit_serial_0.cpp)
+
+add_executable(advection_implicit_parallel advection_implicit_parallel.cpp)
+set_target_properties(advection_implicit_parallel PROPERTIES CXX_STANDARD 20)
+target_link_libraries(advection_implicit_parallel PRIVATE TBB::tbb benchmark::benchmark)
+
+add_executable(advection_explicit_parallel advection_explicit_parallel.cpp)
+set_target_properties(advection_explicit_parallel PROPERTIES CXX_STANDARD 20)
+target_link_libraries(advection_explicit_parallel PRIVATE TBB::tbb benchmark::benchmark)
+
+add_executable(advection_explicit_serial advection_explicit_serial.cpp)
+set_target_properties(advection_explicit_serial PROPERTIES CXX_STANDARD 20)
+target_link_libraries(advection_explicit_serial PRIVATE TBB::tbb benchmark::benchmark)
+
+add_executable(advection_implicit_serial advection_implicit_serial.cpp)
+set_target_properties(advection_implicit_serial PROPERTIES CXX_STANDARD 20)
+target_link_libraries(advection_implicit_serial PRIVATE TBB::tbb benchmark::benchmark)
 
