@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.16)
+project(cpp_generic)
+
+find_package(MPI REQUIRED)
+find_package(benchmark REQUIRED)
+
+add_executable(mpi_basic_hello_world mpi_basic_hello_world.cpp)
+set_target_properties(mpi_basic_hello_world PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_basic_hello_world PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_basic_send_recive mpi_basic_send_recive.cpp)
+set_target_properties(mpi_basic_send_recive PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_basic_send_recive PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_basic_send_recive_circle mpi_basic_send_recive_circle.cpp)
+set_target_properties(mpi_basic_send_recive_circle PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_basic_send_recive_circle PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_collective_barrier mpi_collective_barrier.cpp)
+set_target_properties(mpi_collective_barrier PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_collective_barrier PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_collective_bcast mpi_collective_bcast.cpp)
+set_target_properties(mpi_collective_bcast PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_collective_bcast PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_collective_scatter_gather mpi_collective_scatter_gather.cpp)
+set_target_properties(mpi_collective_scatter_gather PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_collective_scatter_gather PRIVATE MPI::MPI_CXX)
+
+add_executable(mpi_collective_reduce mpi_collective_reduce.cpp)
+set_target_properties(mpi_collective_reduce PROPERTIES CXX_STANDARD 20)
+target_link_libraries(mpi_collective_reduce PRIVATE MPI::MPI_CXX)
